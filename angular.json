@@ -3,5 +3,37 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-  }
+    "lv-assistant": {
+      "projectType": "library",
+      "root": "projects/lv-assistant",
+      "sourceRoot": "projects/lv-assistant/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/lv-assistant/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/lv-assistant/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/lv-assistant/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/lv-assistant/src/test.ts",
+            "tsConfig": "projects/lv-assistant/tsconfig.spec.json",
+            "karmaConfig": "projects/lv-assistant/karma.conf.js"
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "lv-assistant"
 }
