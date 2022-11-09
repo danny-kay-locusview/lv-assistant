@@ -1,0 +1,31 @@
+{
+  "name": "lv-assistant",
+  "version": "0.0.1",
+  "peerDependencies": {
+    "@angular/common": "^13.1.0",
+    "@angular/core": "^13.1.0"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "module": "fesm2015/lv-assistant.mjs",
+  "es2020": "fesm2020/lv-assistant.mjs",
+  "esm2020": "esm2020/lv-assistant.mjs",
+  "fesm2020": "fesm2020/lv-assistant.mjs",
+  "fesm2015": "fesm2015/lv-assistant.mjs",
+  "typings": "lv-assistant.d.ts",
+  "exports": {
+    "./package.json": {
+      "default": "./package.json"
+    },
+    ".": {
+      "types": "./lv-assistant.d.ts",
+      "esm2020": "./esm2020/lv-assistant.mjs",
+      "es2020": "./fesm2020/lv-assistant.mjs",
+      "es2015": "./fesm2015/lv-assistant.mjs",
+      "node": "./fesm2015/lv-assistant.mjs",
+      "default": "./fesm2020/lv-assistant.mjs"
+    }
+  },
+  "sideEffects": false
+}
